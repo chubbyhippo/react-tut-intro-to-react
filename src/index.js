@@ -11,8 +11,9 @@ class Square extends React.Component {
   }
   render() {
     return (
-      <button className="square" onClick={() => alert("click")}>
-        {this.props.value}
+      <button className="square"
+        onClick={() => this.setState({ value: "X" })}>
+        {this.state.value}
       </button>
     );
   }
@@ -65,4 +66,5 @@ class Game extends React.Component {
   }
 }
 
-ReactDOM.render(<Game />, document.getElementById("root"));
+ReactDOM.render(<Game />,
+  document.getElementById("root"));
